@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/about_window.css') }}">
+</head>
+<body>
+
+{% include "header.html" %}
+<div id="aboutWindow"><div>
+    <h1>Linear Algebra Comics</h1>
+    <p>I drew these comics in Fall of 2019 and Winter of 2020, during an (actually really good)
+        linear algebra class. They sat in my notebooks for almost a year, until I decided others
+        might find them funny, and so I made this website. Coding this website was my first real
+        foray into HTML and CSS, and it has been a fun journey.</p>
+
+    <p>In the fall, I mostly drew short comics, relating to the day's lecture, or other things I
+        thought were funny. I drew the (incredibly niche) <a href = "parasite">Linear Algebra Parasite</a>
+        after seeing the film.</p>
+
+    <p>Once winter term rolled around, I decided to tell a <a href = "linear">grander story</a>, spanning the entire term.
+        It wouldn’t try to <i>teach</i> linear algebra, but would instead use linear algebra as a
+        framework upon which I would build the universe of the story. I started with the first panel,
+        having no idea where the story would go, and made it up as I went along.<p>
+
+And for those of you wondering, yes I did pass the class.
+</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parasite</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+    <style>
+        #panels img {
+            max-width: 600px;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+{% include "header.html" %}
+<div id="panels">
+    {%for i in range(1, 12)%}
+    <img src= "{{ url_for('static', filename='images/parasite' + i|string + '.jpg') }}"/>
+    {%endfor%}
+</div>
+</body>
+</html>

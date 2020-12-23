@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Linear</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+</head>
+<body>
+{% include "header.html" %}
+{% include "pageButtons.html" %}
+<div id="panelImage">
+    <img width="90%;" src= "{{ url_for('static', filename='images/' + image_file) }}"/>
+</div>
+{% include "pageButtons.html" %}
+</div>
+</body>
+</html>

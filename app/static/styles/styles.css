@@ -1,0 +1,90 @@
+:root {
+    --bg_green: #bfd9bf;
+    --violet_verylight: #eeeef6;
+    --violet_light: #cdcde4;
+    --violet_midlight: #9c9cc9;
+    --violet_middark: #363663;
+    --violet_dark: #3e3e74;
+}
+body {
+    background-color: var(--bg_green);
+}
+
+#panelImage {
+}
+
+#panelImage img {
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
+}
+
+.pageButtons {
+    padding: 25px;
+}
+.pageButtons table {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+}
+.pageButtons td {
+    width: 16%;
+    text-align:center;
+}
+
+.pageButtons input {
+    width:100%;
+    height:50px;
+    background-color: var(--violet_light);
+    border: 2px solid black;
+    border-color: var(--violet_middark);
+    cursor: pointer;
+}
+
+.pageButtons input:hover {
+    background-color: var(--violet_middark);
+}
+
+.disabled {
+    cursor: default;
+}
+#navHeader {
+    padding: 25px;
+}
+
+#navHeader table {
+    width:100%
+}
+#navHeader td {
+    width: 16%;
+    text-align:center;
+}
+
+#navHeader input {
+    width:100%;
+    height:50px;
+    background-color: var(--violet_midlight);
+    border: 2px solid black;
+    border-color: var(--violet_dark);
+    cursor: pointer;
+}
+
+#navHeader input:hover {
+    background-color: var(--violet_middark);
+}
+
+#aboutWindow {
+    max-width: 500px;
+    padding: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#aboutWindow div {
+    padding: 25px;
+    border: 2px solid black;
+    border-color: #363663;
+    background-color: var(--violet_verylight);
+}
