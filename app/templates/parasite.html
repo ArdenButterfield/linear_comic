@@ -16,11 +16,13 @@
     </style>
 </head>
 <body>
+<div id="bigContainer">
 {% include "header.html" %}
-<div id="panels">
-    {%for i in range(1, 12)%}
-    <img src= "{{ url_for('static', filename='images/parasite' + i|string + '.jpg') }}"/>
-    {%endfor%}
+    <div id="panels">
+        {%for i in range(1, 12)%}
+        <img src= "{{ url_for('static', filename='images/parasite' + i|string + '.jpg') }}"/>
+        {%endfor%}
+    </div>
 </div>
 </body>
 </html>

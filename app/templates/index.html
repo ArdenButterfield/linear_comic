@@ -7,9 +7,9 @@
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/about_window.css') }}">
 </head>
 <body>
-
+<div id="bigContainer">
 {% include "header.html" %}
-<div id="aboutWindow"><div>
+<div id="aboutWindow"><div id="aboutText">
     <h1>Linear Algebra Comics</h1>
     <p>I drew these comics in Fall of 2019 and Winter of 2020, during an (actually really good)
         linear algebra class. They sat in my notebooks for almost a year, until I decided others
@@ -27,6 +27,7 @@
 
 And for those of you wondering, yes I did pass the class.
 </p>
+</div>
 </div>
 </div>
 </body>
