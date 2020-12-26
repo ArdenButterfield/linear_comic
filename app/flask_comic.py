@@ -1,6 +1,6 @@
 import flask
-
 import logging
+
 logging.basicConfig()
 logging.getLogger().setLevel(logging.DEBUG)
 
@@ -54,5 +54,5 @@ def show_panel(panel_num):
 app.logger.setLevel(logging.DEBUG)
 
 if __name__ == "__main__":
-    print("Opening for global access on port {}".format(5000))
+    print(f"Opening for global access on port {5000}")
     app.run(port=5000, host="0.0.0.0")
