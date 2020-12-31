@@ -3,8 +3,8 @@
     <tr>
         <td class="nav_button">
             {% block content1 %}
-            {% if not first_panel %}
-                <input class="buttonText" type="button" onclick="location.href = '{{prev_panel}}'" Value="Previous panel"/>
+            {% if not is_first_panel %}
+                <input class="buttonText" type="button" onclick="location.href = '{{panel_num - 1}}'" Value="Previous panel"/>
             {% endif %}
             {% endblock content1 %}
         </td>
@@ -12,8 +12,8 @@
         <td class="nav_button">
 
             {% block content2 %}
-            {% if not last_panel %}
-                <input class="buttonText" type="button" onclick="location.href = '{{next_panel}}'" Value="Next Panel"/>
+            {% if not is_last_panel %}
+                <input class="buttonText" type="button" onclick="location.href = '{{panel_num + 1}}'" Value="Next Panel"/>
             {% endif %}
             {% endblock content2 %}
         </td>
