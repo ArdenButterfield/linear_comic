@@ -12,6 +12,12 @@ app.secret_key = "Not a secret, for now"
 
 max_panels = 49
 
+more_comics_list = []
+with open("more_comics.txt", "r") as more_comics_file:
+    for line in more_comics_file:
+        if line[0] != "#" and not line.isspace():
+            more_comics_list.append(line.strip())
+
 @app.route("/")
 def index():
     app.logger.debug("Sending index page")
@@ -25,6 +31,12 @@ def parasite():
 @app.route("/linear")
 def comic():
     return flask.redirect("/linear/0")
+
+@app.route("/more")
+def misc():
+    app.logger.debug("Sending more comics page")
+    return flask.render_template("more.html", images=more_comics_list,
+                                 list_len=len(more_comics_list))
 
 @app.route("/linear/<int:panel_num>")
 def show_panel(panel_num):
@@ -45,7 +57,8 @@ def show_panel(panel_num):
     else:
         image_file = f"linearalgebrapanels{panel_num}.jpg"
 
-    app.logger.debug(f"panel: {panel_num}, prev: {prev_panel}, next: {next_panel}, first: {first_panel}, last: {last_panel}.")
+    app.logger.debug(f"panel: {panel_num}, prev: {prev_panel}, "
+                     f"next: {next_panel}, first: {first_panel}, last: {last_panel}.")
 
     return flask.render_template("panel.html", image_file=image_file,
                                  panel_num=panel_num, next_panel=next_panel, prev_panel=prev_panel,

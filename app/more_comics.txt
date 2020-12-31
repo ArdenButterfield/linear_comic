@@ -1,0 +1,9 @@
+# List of comics for the more subpage, in order.
+
+clickbait_inverse.jpg
+fractions.jpg
+google.jpg
+invertible_theorem.jpg
+cocos.jpg
+ordinary_differentials.jpg
+note_to_self.jpg

@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Parasite</title>
+    <title>More Comics</title>
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
 </head>
 <body>
 <div id="bigContainer">
 {% include "header.html" %}
     <div id="gallery">
-        {%for i in range(1, 12)%}
-        <img src= "{{ url_for('static', filename='images/parasite' + i|string + '.jpg') }}"/>
+        {%for i in range(0, list_len)%}
+        <img src= "{{ url_for('static', filename='images/' + images[i]|string) }}"/>
         {%endfor%}
     </div>
 </div>
