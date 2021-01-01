@@ -1,5 +1,11 @@
-# Linear Algebra Comic
+# Linear Algebra Comics!
 
-Back when I was taking linear algebra, I wrote some comics. I thought it could be fun to make a website for them. Here's the code for that website. There are still some more pages that I have to scan and process, but the story is about 75% of the way there as is.
+Back when I was taking linear algebra, I wrote some comics. 
+I thought it could be fun to make a website for them. 
+Perhaps there are some people out there who will understand and
+appreciate the incredibly niche jokes I came up with.
+Maybe you're one of those people.
 
-To run it, run the `flask_comic.py` python file. 
+
+Anyway, here's the code for that website. To view the website, run the program `flask_comic.py`. 
+It is set up to run on port 5000.
