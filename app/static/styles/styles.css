@@ -4,7 +4,9 @@
     --panelnav_color: #d6d3ce;
     --mainnav_color: #d6d3ce;
     --hover_color: #f2e26b;
+    --disabled_button_color: #d2ca89;
     --border_color: #40280f;
+
 }
 
 body {
@@ -90,6 +92,15 @@ body {
     border: 2px solid black;
     border-color: var(--border_color);
     cursor: pointer;
+}
+
+.disabledButton {
+    background-color: var(--disabled_button_color) !important;
+    cursor: default !important;
+}
+
+.disabledButton:hover {
+    background-color: var(--disabled_button_color) !important;
 }
 
 #navHeader input:hover {

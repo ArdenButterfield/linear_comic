@@ -2,20 +2,20 @@
 <table class="center" cellpadding="1" cellspacing="0" border="0">
     <tr>
         <td class="nav_button">
-            {% block content1 %}
+            {% block prevbutton %}
             {% if not is_first_panel %}
                 <input class="buttonText" type="button" onclick="location.href = '{{panel_num - 1}}'" Value="Previous panel"/>
             {% endif %}
-            {% endblock content1 %}
+            {% endblock prevbutton %}
         </td>
 
         <td class="nav_button">
 
-            {% block content2 %}
+            {% block nextbutton %}
             {% if not is_last_panel %}
                 <input class="buttonText" type="button" onclick="location.href = '{{panel_num + 1}}'" Value="Next Panel"/>
             {% endif %}
-            {% endblock content2 %}
+            {% endblock nextbutton %}
         </td>
     </tr>
 </table>

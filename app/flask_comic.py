@@ -15,19 +15,19 @@ PORT_NUM = 5000
 app.secret_key = "Not a secret, for now"
 
 # Number of panels in the Epic.
-MAX_PANELS = 49
+MAX_PANELS = 59
 
 
 @app.route("/")
 def index():
     app.logger.debug("Sending index page")
-    return flask.render_template("index.html")
+    return flask.render_template("index.html", current_page="Home")
 
 
 @app.route("/parasite")
 def parasite():
     app.logger.debug("Sending Parasite page")
-    return flask.render_template("parasite.html")
+    return flask.render_template("parasite.html", current_page="Parasite")
 
 
 @app.route("/linear")
@@ -45,7 +45,7 @@ def misc():
                 more_comics_list.append(line.strip())
     app.logger.debug("Sending more comics page")
     return flask.render_template("more.html", images=more_comics_list,
-                                 list_len=len(more_comics_list))
+                                 list_len=len(more_comics_list),current_page="More")
 
 
 @app.route("/linear/<int:panel_num>")
@@ -68,7 +68,7 @@ def show_panel(panel_num):
                      f"is_last_panel: {is_last_panel}.")
 
     return flask.render_template("panel.html", image_file=image_file, panel_num=panel_num,
-                                 is_first_panel=is_first_panel,is_last_panel=is_last_panel)
+                                 is_first_panel=is_first_panel,is_last_panel=is_last_panel,current_page="Linear")
 
 
 app.logger.setLevel(logging.DEBUG)
