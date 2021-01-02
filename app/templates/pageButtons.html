@@ -4,7 +4,7 @@
         <td class="nav_button">
             {% block prevbutton %}
             {% if not is_first_panel %}
-                <input class="buttonText" type="button" onclick="location.href = '{{panel_num - 1}}'" Value="Previous panel"/>
+                <input class="buttonText" type="button" onclick="location.href = '/linear/{{panel_num - 1}}'" Value="Previous panel"/>
             {% endif %}
             {% endblock prevbutton %}
         </td>
@@ -13,7 +13,7 @@
 
             {% block nextbutton %}
             {% if not is_last_panel %}
-                <input class="buttonText" type="button" onclick="location.href = '{{panel_num + 1}}'" Value="Next Panel"/>
+                <input class="buttonText" type="button" onclick="location.href = '/linear/{{panel_num + 1}}'" Value="Next Panel"/>
             {% endif %}
             {% endblock nextbutton %}
         </td>

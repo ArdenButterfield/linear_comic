@@ -1,7 +1,7 @@
 <div id="navHeader">
     <table cellpadding="1" cellspacing="0" border="0">
         <tr>
-            {% for location in [['/', "Home"], ['/linear', "Linear"], ['/parasite', "Parasite"], ['/more', "More"]] %}
+            {% for location in [['/', "Home"], ['/linear/', "Linear"], ['/parasite/', "Parasite"], ['/more/', "More"]] %}
             {% if current_page == location[1] %}
             <td>
                 <input class="buttonText disabledButton" type="button" Value={{location[1]}} />

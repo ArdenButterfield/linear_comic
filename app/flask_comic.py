@@ -17,25 +17,24 @@ app.secret_key = "Not a secret, for now"
 # Number of panels in the Epic.
 MAX_PANELS = 59
 
-
 @app.route("/")
 def index():
     app.logger.debug("Sending index page")
     return flask.render_template("index.html", current_page="Home")
 
 
-@app.route("/parasite")
+@app.route("/parasite/")
 def parasite():
     app.logger.debug("Sending Parasite page")
     return flask.render_template("parasite.html", current_page="Parasite")
 
 
-@app.route("/linear")
+@app.route("/linear/")
 def comic():
-    return flask.redirect("/linear/0")
+    return flask.redirect("/linear/0/")
 
 
-@app.route("/more")
+@app.route("/more/")
 def misc():
     # Fetch the filenames for the comics on the More page
     more_comics_list = []
@@ -48,7 +47,7 @@ def misc():
                                  list_len=len(more_comics_list),current_page="More")
 
 
-@app.route("/linear/<int:panel_num>")
+@app.route("/linear/<int:panel_num>/")
 def show_panel(panel_num):
 
     if panel_num < 0 or panel_num > MAX_PANELS:
